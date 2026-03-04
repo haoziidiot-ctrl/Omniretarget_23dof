@@ -1,0 +1,156 @@
+<mujoco model="robot_model">
+  <compiler angle="radian" meshdir="."/>
+
+  <asset>
+    <mesh name="body_part000" content_type="model/stl" file="assets/body_part000.stl"/>
+    <mesh name="body_part001" content_type="model/stl" file="assets/body_part001.stl"/>
+    <mesh name="body_part002" content_type="model/stl" file="assets/body_part002.stl"/>
+    <mesh name="AR5-5_07L_base" content_type="model/stl" file="meshes/AR5_P_L/AR5-5_07L_base.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07L_link1" content_type="model/stl" file="meshes/AR5_P_L/AR5-5_07L_link1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07L_link2" content_type="model/stl" file="meshes/AR5_P_L/AR5-5_07L_link2.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07L_link3" content_type="model/stl" file="meshes/AR5_P_L/AR5-5_07L_link3.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07L_link4" content_type="model/stl" file="meshes/AR5_P_L/AR5-5_07L_link4.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07L_link5" content_type="model/stl" file="meshes/AR5_P_L/AR5-5_07L_link5.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07L_link6" content_type="model/stl" file="meshes/AR5_P_L/AR5-5_07L_link6.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07L_link7" content_type="model/stl" file="meshes/AR5_P_L/AR5-5_07L_link7.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07R_base" content_type="model/stl" file="meshes/AR5_P_R/AR5-5_07R_base.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07R_link1" content_type="model/stl" file="meshes/AR5_P_R/AR5-5_07R_link1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07R_link2" content_type="model/stl" file="meshes/AR5_P_R/AR5-5_07R_link2.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07R_link3" content_type="model/stl" file="meshes/AR5_P_R/AR5-5_07R_link3.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07R_link4" content_type="model/stl" file="meshes/AR5_P_R/AR5-5_07R_link4.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07R_link5" content_type="model/stl" file="meshes/AR5_P_R/AR5-5_07R_link5.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07R_link6" content_type="model/stl" file="meshes/AR5_P_R/AR5-5_07R_link6.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="AR5-5_07R_link7" content_type="model/stl" file="meshes/AR5_P_R/AR5-5_07R_link7.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+
+  <worldbody>
+    <geom name="ground" type="plane" size="10 10 0.1" pos="0 0 0" material="MatPlane" contype="1" conaffinity="3"/>
+    <light pos="0 0 1000" castshadow="true"/>
+    <body name="Trunk_base_link">
+      <inertial pos="-0.07661184 -0.00660891 0.56212704" quat="0.9562821 0.01196454 0.05648289 0.28668987" mass="50" diaginertia="12.28369623 12.25056267 1.93484835"/>
+      <freejoint/>
+      <geom pos="-0.41 0 0" quat="0.500048 0.5 0.499952 0.5" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="body_part000"/>
+      <geom name="Trunk_base_link_col0" pos="-0.41 0 0" quat="0.500048 0.5 0.499952 0.5" type="mesh" contype="1" conaffinity="1" rgba="1 1 1 1" mesh="body_part000"/>
+      <geom pos="-0.41 0 0" quat="0.500048 0.5 0.499952 0.5" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="body_part001"/>
+      <geom name="Trunk_base_link_col1" pos="-0.41 0 0" quat="0.500048 0.5 0.499952 0.5" type="mesh" contype="1" conaffinity="1" rgba="1 1 1 1" mesh="body_part001"/>
+      <geom pos="-0.41 0 0" quat="0.500048 0.5 0.499952 0.5" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="body_part002"/>
+      <geom name="Trunk_base_link_col2" pos="-0.41 0 0" quat="0.500048 0.5 0.499952 0.5" type="mesh" contype="1" conaffinity="1" rgba="1 1 1 1" mesh="body_part002"/>
+      <geom pos="0 0.075 1.46" quat="0.500398 -0.5 0.5 0.499602" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07L_base"/>
+      <geom pos="0 -0.075 1.46" quat="0.500398 0.5 0.5 -0.499602" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07R_base"/>
+      <body name="AR5-5_07L_link1" pos="0 0.075 1.46" quat="0.500398 -0.5 0.5 0.499602">
+        <inertial pos="1.6e-05 -0.000698 0.168185" quat="0.999997 -0.00214472 0.000383748 0.00146707" mass="2.66" diaginertia="0.00484214 0.00444297 0.00427071"/>
+        <joint name="AR5-5_07L_joint_1" pos="0 0 0" axis="0 0 1" range="-3.1067 3.1067" actuatorfrcrange="-108 108"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07L_link1"/>
+        <geom name="AR5-5_07L_link1" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07L_link1"/>
+        <body name="AR5-5_07L_link2" pos="0 0 0.1745">
+          <inertial pos="4.5e-05 -0.002985 0.102801" quat="0.997339 0.0729018 6.91933e-05 4.81662e-05" mass="2.3" diaginertia="0.0115542 0.0100744 0.00424755"/>
+          <joint name="AR5-5_07L_joint_2" pos="0 0 0" axis="0 1 0" range="-2.0944 2.0944" actuatorfrcrange="-108 108"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07L_link2"/>
+          <geom name="AR5-5_07L_link2" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07L_link2"/>
+          <body name="AR5-5_07L_link3" pos="0 0 0.314">
+            <inertial pos="0.0073 -0.001371 -0.01502" quat="0.99726 0.00410323 -0.0720487 0.0162698" mass="1.8" diaginertia="0.00483088 0.00432544 0.00250143"/>
+            <joint name="AR5-5_07L_joint_3" pos="0 0 0" axis="0 0 1" range="-3.1067 3.1067" actuatorfrcrange="-66 66"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07L_link3"/>
+            <geom name="AR5-5_07L_link3" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07L_link3"/>
+            <body name="AR5-5_07L_link4" pos="0.0105 0 0">
+              <inertial pos="-0.007816 -0.002536 0.066782" quat="0.988876 0.137571 0.0448128 -0.0345064" mass="1.13" diaginertia="0.00353774 0.00273204 0.00178364"/>
+              <joint name="AR5-5_07L_joint_4" pos="0 0 0" axis="0 1 0" range="-1.0472 2.5307" actuatorfrcrange="-66 66"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07L_link4"/>
+              <geom name="AR5-5_07L_link4" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07L_link4"/>
+              <body name="AR5-5_07L_link5" pos="-0.0105 0 0.26">
+                <inertial pos="0.000234 0.002477 -0.0812" quat="0.999733 0.0156875 -0.00742354 0.015283" mass="1.19" diaginertia="0.00238375 0.00195459 0.00149914"/>
+                <joint name="AR5-5_07L_joint_5" pos="0 0 0" axis="0 0 1" range="-3.1067 3.1067" actuatorfrcrange="-19 19"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07L_link5"/>
+                <geom name="AR5-5_07L_link5" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07L_link5"/>
+                <body name="AR5-5_07L_link6">
+                  <inertial pos="0.007204 0.000715 -4e-05" quat="-0.0524828 0.709465 0.0615969 0.700079" mass="0.82" diaginertia="0.000661662 0.000658059 0.000605789"/>
+                  <joint name="AR5-5_07L_joint_6" pos="0 0 0" axis="0 1 0" range="-1.0472 1.0472" actuatorfrcrange="-19 19"/>
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07L_link6"/>
+                  <geom name="AR5-5_07L_link6" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07L_link6"/>
+                  <body name="AR5-5_07L_link7">
+                    <inertial pos="-0.002337 0.000307 0.051645" quat="0.689457 -0.15808 -0.163105 0.687791" mass="0.32" diaginertia="0.000670654 0.000441733 0.000411463"/>
+                    <joint name="AR5-5_07L_joint_7" pos="0 0 0" axis="1 0 0" range="-1.0472 1.0472" actuatorfrcrange="-19 19"/>
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07L_link7"/>
+                    <geom name="AR5-5_07L_link7" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07L_link7"/>
+                    <body name="AR5-5_07L_tcp" pos="0 0 0.092"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="AR5-5_07R_link1" pos="0 -0.075 1.46" quat="0.500398 0.5 0.5 -0.499602">
+        <inertial pos="1.6e-05 -0.000698 0.168185" quat="0.999997 -0.00214472 0.000383748 0.00146707" mass="2.66" diaginertia="0.00484214 0.00444297 0.00427071"/>
+        <joint name="AR5-5_07R_joint_1" pos="0 0 0" axis="0 0 1" range="-3.1067 3.1067" actuatorfrcrange="-108 108"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07R_link1"/>
+        <geom name="AR5-5_07R_link1" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07R_link1"/>
+        <body name="AR5-5_07R_link2" pos="0 0 0.1745">
+          <inertial pos="4.5e-05 -0.002985 0.102801" quat="0.997339 0.0729018 6.91933e-05 4.81662e-05" mass="2.3" diaginertia="0.0115542 0.0100744 0.00424755"/>
+          <joint name="AR5-5_07R_joint_2" pos="0 0 0" axis="0 1 0" range="-2.0944 2.0944" actuatorfrcrange="-108 108"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07R_link2"/>
+          <geom name="AR5-5_07R_link2" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07R_link2"/>
+          <body name="AR5-5_07R_link3" pos="0 0 0.314">
+            <inertial pos="0.0073 -0.001371 -0.01502" quat="0.99726 0.00410323 -0.0720487 0.0162698" mass="1.8" diaginertia="0.00483088 0.00432544 0.00250143"/>
+            <joint name="AR5-5_07R_joint_3" pos="0 0 0" axis="0 0 1" range="-3.1067 3.1067" actuatorfrcrange="-66 66"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07R_link3"/>
+            <geom name="AR5-5_07R_link3" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07R_link3"/>
+            <body name="AR5-5_07R_link4" pos="0.0105 0 0">
+              <inertial pos="-0.007816 -0.002536 0.066782" quat="0.988876 0.137571 0.0448128 -0.0345064" mass="1.13" diaginertia="0.00353774 0.00273204 0.00178364"/>
+              <joint name="AR5-5_07R_joint_4" pos="0 0 0" axis="0 1 0" range="-1.0472 2.5307" actuatorfrcrange="-66 66"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07R_link4"/>
+              <geom name="AR5-5_07R_link4" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07R_link4"/>
+              <body name="AR5-5_07R_link5" pos="-0.0105 0 0.26">
+                <inertial pos="0.000226 -0.002462 -0.081161" quat="0.999797 -0.0146465 -0.00904589 -0.0105043" mass="1.19" diaginertia="0.00239052 0.00196117 0.00150169"/>
+                <joint name="AR5-5_07R_joint_5" pos="0 0 0" axis="0 0 1" range="-3.1067 3.1067" actuatorfrcrange="-19 19"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07R_link5"/>
+                <geom name="AR5-5_07R_link5" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07R_link5"/>
+                <body name="AR5-5_07R_link6">
+                  <inertial pos="0.007094 -0.000714 4.2e-05" quat="0.0562821 0.700275 -0.0478802 0.710038" mass="0.82" diaginertia="0.000666443 0.000662713 0.000605964"/>
+                  <joint name="AR5-5_07R_joint_6" pos="0 0 0" axis="0 1 0" range="-1.0472 1.0472" actuatorfrcrange="-19 19"/>
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07R_link6"/>
+                  <geom name="AR5-5_07R_link6" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07R_link6"/>
+                  <body name="AR5-5_07R_link7">
+                    <inertial pos="-0.002337 6e-06 0.051714" quat="0.689301 -0.160322 -0.161384 0.687834" mass="0.32" diaginertia="0.000671272 0.000442651 0.000411257"/>
+                    <joint name="AR5-5_07R_joint_7" pos="0 0 0" axis="1 0 0" range="-1.0472 1.0472" actuatorfrcrange="-19 19"/>
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="AR5-5_07R_link7"/>
+                    <geom name="AR5-5_07R_link7" type="mesh" contype="2" conaffinity="0" rgba="1 1 1 1" mesh="AR5-5_07R_link7"/>
+                    <body name="AR5-5_07R_tcp" pos="0 0 0.092"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="AR5-5_07L_joint_1_motor" joint="AR5-5_07L_joint_1" ctrllimited="true" ctrlrange="-108 108"/>
+    <motor name="AR5-5_07L_joint_2_motor" joint="AR5-5_07L_joint_2" ctrllimited="true" ctrlrange="-108 108"/>
+    <motor name="AR5-5_07L_joint_3_motor" joint="AR5-5_07L_joint_3" ctrllimited="true" ctrlrange="-66 66"/>
+    <motor name="AR5-5_07L_joint_4_motor" joint="AR5-5_07L_joint_4" ctrllimited="true" ctrlrange="-66 66"/>
+    <motor name="AR5-5_07L_joint_5_motor" joint="AR5-5_07L_joint_5" ctrllimited="true" ctrlrange="-19 19"/>
+    <motor name="AR5-5_07L_joint_6_motor" joint="AR5-5_07L_joint_6" ctrllimited="true" ctrlrange="-19 19"/>
+    <motor name="AR5-5_07L_joint_7_motor" joint="AR5-5_07L_joint_7" ctrllimited="true" ctrlrange="-19 19"/>
+    <motor name="AR5-5_07R_joint_1_motor" joint="AR5-5_07R_joint_1" ctrllimited="true" ctrlrange="-108 108"/>
+    <motor name="AR5-5_07R_joint_2_motor" joint="AR5-5_07R_joint_2" ctrllimited="true" ctrlrange="-108 108"/>
+    <motor name="AR5-5_07R_joint_3_motor" joint="AR5-5_07R_joint_3" ctrllimited="true" ctrlrange="-66 66"/>
+    <motor name="AR5-5_07R_joint_4_motor" joint="AR5-5_07R_joint_4" ctrllimited="true" ctrlrange="-66 66"/>
+    <motor name="AR5-5_07R_joint_5_motor" joint="AR5-5_07R_joint_5" ctrllimited="true" ctrlrange="-19 19"/>
+    <motor name="AR5-5_07R_joint_6_motor" joint="AR5-5_07R_joint_6" ctrllimited="true" ctrlrange="-19 19"/>
+    <motor name="AR5-5_07R_joint_7_motor" joint="AR5-5_07R_joint_7" ctrllimited="true" ctrlrange="-19 19"/>
+  </actuator>
+  <!-- setup scene -->
+  <statistic center="1.0 0.7 1.0" extent="0.8"/>
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.1 0.1 0.1" specular="0.9 0.9 0.9"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="-140" elevation="-20"/>
+  </visual>
+  <asset>
+    <texture name="texplane" builtin="checker" height="512" width="512" rgb1=".2 .3 .4" rgb2=".1 .15 .2" type="2d"/>
+    <material name="MatPlane" reflectance="0.5" shininess="0.01" specular="0.1" texrepeat="1 1" texture="texplane" texuniform="true"/>
+  </asset>
+</mujoco>
