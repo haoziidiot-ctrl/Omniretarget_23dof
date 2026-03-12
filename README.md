@@ -37,7 +37,7 @@ python examples/robot_retarget.py \
 并已与**[Robomimic_23dof](https://gitlab.i.rokae.com/huanghao/robomimic_deploy_23dof.git)**的部署框架打通，故不在次项目中进行策略训练
 
 
-##以下是原作者仓库其他内容以及我使用调整过的训练框架
+## 以下是原作者仓库其他内容以及我使用调整过的训练框架
 ## 特征
 - **多模拟器支持**：IsaacGym、IsaacSim、MuJoCo Warp (MJWarp) 和 MuJoCo（仅用于推理）。
 - **多种强化学习算法**：PPO 和 FastSAC。
