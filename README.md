@@ -18,7 +18,9 @@ python src/holosoma_retargeting/tools/convert_hmr4d_results_pt_to_smplx_npz.py \
 ```
 其中，
 	--pt pt文件地址
+	
 	--out 生成npz文件地址
+	
 	--smpl-model-dir 从[SMPLX]官网下载的smplx模型(https://smpl-x.is.tue.mpg.de/)
 
 ## 重定向步骤
