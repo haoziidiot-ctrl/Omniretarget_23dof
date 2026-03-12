@@ -16,13 +16,12 @@ python src/holosoma_retargeting/tools/convert_hmr4d_results_pt_to_smplx_npz.py \
   --height-axis z --height-from joints \
   --batch-size 256
 ```
-其中，
+其中
+```
 	--pt pt文件地址
-	
 	--out 生成npz文件地址
-	
 	--smpl-model-dir 从[SMPLX]官网下载的smplx模型(https://smpl-x.is.tue.mpg.de/)
-
+```
 ## 重定向步骤
 ##### 将smplx格式的npz文件重定向到指定23dof机器人上
 ```
