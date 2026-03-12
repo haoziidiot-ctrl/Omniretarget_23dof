@@ -2,7 +2,7 @@
 
 Omniretarget_23dof框架是在原Holosoma框架上改成23dof的g1版本，是一个全面的人形机器人框架，用于在人形机器人上训练和部署强化学习策略，以及进行动作重定向（motion retargeting）。 它支持跨多个模拟器（IsaacGym、IsaacSim、MJWarp、MuJoCo）的移动（速度跟踪）和全身跟踪任务，并支持 PPO 和 FastSAC 等算法。
 
-本项目将结合[GVHMR](https://github.com/zju3dv/GVHMR.git)视频提取，[GMR](https://gitlab.i.rokae.com/huanghao/gmr.git)机器人重定向，以及[Byondmimic_23dof](https://gitlab.i.rokae.com/huanghao/beyondmimic_23dof.git)人形机器人运动跟踪训练框架，[Robomimic_23dof]机器人策略部署框架(https://gitlab.i.rokae.com/huanghao/robomimic_deploy_23dof.git)，进行一个完整的tracking motion的完整训练部署流程。
+本项目将结合[GVHMR](https://github.com/zju3dv/GVHMR.git)视频提取，[GMR](https://gitlab.i.rokae.com/huanghao/gmr.git)机器人重定向，以及[Byondmimic_23dof](https://gitlab.i.rokae.com/huanghao/beyondmimic_23dof.git)人形机器人运动跟踪训练框架，[Robomimic_23dof](https://gitlab.i.rokae.com/huanghao/robomimic_deploy_23dof.git)机器人策略部署框架，进行一个完整的tracking motion的完整训练部署流程。
 
 Omniretarget更多起重定向功能，用于将复杂高难度或与物体接触动作进行重定向，实现高精度接触要求。
 
